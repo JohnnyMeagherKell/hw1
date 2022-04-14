@@ -132,105 +132,52 @@ CREATE TABLE characters (
 -- Insert data into your database that reflects the sample data shown above
 -- Use hard-coded foreign key IDs when necessary
 INSERT INTO movies (title, year, rating, studio_id)
-VALUES ("Batman Begins", 2005, "PG-13", 1);
-
-INSERT INTO movies (title, year, rating, studio_id)
-VALUES ("The Dark Knight", 2008, "PG-13", 1);
-
-INSERT INTO movies (title, year, rating, studio_id)
-VALUES ("The Dark Knight Rises", 2012, "PG-13", 1);
+VALUES 
+("Batman Begins", 2005, "PG-13", 1),
+("The Dark Knight", 2008, "PG-13", 1),
+("The Dark Knight Rises", 2012, "PG-13", 1);
 
 INSERT INTO actors (name)
-VALUES ("Christian Bale");
-
-INSERT INTO actors (name)
-VALUES ("Michael Caine");
-
-INSERT INTO actors (name)
-VALUES ("Liam Neeson");
-
-INSERT INTO actors (name)
-VALUES ("Katie Holmes");
-
-INSERT INTO actors (name)
-VALUES ("Gary Oldman");
-
-INSERT INTO actors (name)
-VALUES ("Heath Ledger");
-
-INSERT INTO actors (name)
-VALUES ("Aaron Eckhart");
-
-INSERT INTO actors (name)
-VALUES ("Maggie Gyllenhaal");
-
-INSERT INTO actors (name)
-VALUES ("Tom Hardy");
-
-INSERT INTO actors (name)
-VALUES ("Joseph Gordon-Levitt");
-
-INSERT INTO actors (name)
-VALUES ("Anne Hathaway");
+VALUES 
+("Christian Bale"),
+("Michael Caine"),
+("Liam Neeson"),
+("Katie Holmes"),
+("Gary Oldman"),
+("Heath Ledger"),
+("Aaron Eckhart"),
+("Maggie Gyllenhaal"),
+("Tom Hardy"),
+("Joseph Gordon-Levitt"),
+("Anne Hathaway");
 
 INSERT INTO studios (name)
 VALUES ("Warner Bros.");
 
 INSERT INTO characters (name, actor_id, movie_id)
-VALUES ("Bruce Wayne", 1, 1);
-
-
-INSERT INTO characters (name, actor_id, movie_id)
-VALUES ("Alfred", 2, 1);
-
-
-INSERT INTO characters (name, actor_id, movie_id)
-VALUES ("Ra's Al Ghul", 3, 1);
-
-
-INSERT INTO characters (name, actor_id, movie_id)
-VALUES ("Rachel Dawes", 4, 1);
-
-
-INSERT INTO characters (name, actor_id, movie_id)
-VALUES ("Commissioner Gordon", 5, 1);
-
-INSERT INTO characters (name, actor_id, movie_id)
-VALUES ("Bruce Wayne", 1, 2);
-
-
-INSERT INTO characters (name, actor_id, movie_id)
-VALUES ("Alfred", 2, 2);
-
-INSERT INTO characters (name, actor_id, movie_id)
-VALUES ("Joker", 6, 2);
-
-INSERT INTO characters (name, actor_id, movie_id)
-VALUES ("Harvey Dent", 7, 2);
-
-INSERT INTO characters (name, actor_id, movie_id)
-VALUES ("Rachel Dawes", 8, 2);
-
-INSERT INTO characters (name, actor_id, movie_id)
-VALUES ("Bruce Wayne", 1, 3);
-
-INSERT INTO characters (name, actor_id, movie_id)
-VALUES ("Commissioner Gordon", 5, 3);
-
-INSERT INTO characters (name, actor_id, movie_id)
-VALUES ("Bane", 9, 3);
-
-INSERT INTO characters (name, actor_id, movie_id)
-VALUES ("John Blake", 10, 3);
-
-INSERT INTO characters (name, actor_id, movie_id)
-VALUES ("Selina Kyle", 11, 3);
+VALUES 
+("Bruce Wayne", 1, 1),
+("Alfred", 2, 1),
+("Ra's Al Ghul", 3, 1),
+("Rachel Dawes", 4, 1),
+("Commissioner Gordon", 5, 1),
+("Bruce Wayne", 1, 2),
+("Alfred", 2, 2),
+("Joker", 6, 2),
+("Harvey Dent", 7, 2),
+("Rachel Dawes", 8, 2),
+("Bruce Wayne", 1, 3),
+("Commissioner Gordon", 5, 3),
+("Bane", 9, 3),
+("John Blake", 10, 3),
+("Selina Kyle", 11, 3);
 
 .width 24 5 5 
 -- Prints a header for the movies output
+.print ""
 .print "Movies"
 .print "======"
-
+.print ""
 
 -- The SQL statement for the movies output
 SELECT title, year, rating, studios.name
