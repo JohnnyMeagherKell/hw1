@@ -98,7 +98,7 @@
 -- Turns column mode on but headers off
 .mode column
 .headers off
-.width 24 24 24 
+
 -- Drop existing tables, so you'll start fresh each time this script is run.
 DROP TABLE IF EXISTS movies;
 DROP TABLE IF EXISTS actors;
@@ -226,7 +226,7 @@ VALUES ("John Blake", 10, 3);
 INSERT INTO characters (name, actor_id, movie_id)
 VALUES ("Selina Kyle", 11, 3);
 
-
+.width 24 5 5 
 -- Prints a header for the movies output
 .print "Movies"
 .print "======"
@@ -237,7 +237,7 @@ SELECT title, year, rating, studios.name
 FROM movies
 INNER JOIN studios ON studios.id = studio_id;
 
-
+.width 24 24 24
 -- Prints a header for the cast output
 .print ""
 .print "Top Cast"
